@@ -63,10 +63,10 @@ export const CountriesList = () => {
 
   return (
     <div className="px-10 py-16">
-      <div className="flex justify-between">
-        <div className="flex flex-col">
+      <div className="flex flex-col lg:flex-row lg:justify-between">
+        <div className="flex flex-col mb-4 lg:mb-0">
           <label htmlFor="search" className="flex">
-            <MagnifyingGlassIcon className="self-center mr-2" />
+            <MagnifyingGlassIcon className="lg:self-center mr-2" />
             Search for a country
           </label>
           <input
@@ -75,10 +75,10 @@ export const CountriesList = () => {
             name="search"
             autoComplete="off"
             onChange={handleSearchChange}
-            className="h-12 px-2.5 py-6 self-center border rounded border-border"
+            className="h-12 px-2.5 py-6 lg:self-center border rounded border-border"
           />
         </div>
-        <div className="self-end">
+        <div className="lg:self-end">
           <Dropdown
             label={
               region && region !== "Reset Filter" ? region : "Filter by Region"
@@ -88,7 +88,7 @@ export const CountriesList = () => {
           />
         </div>
       </div>
-      <ul className="grid grid-cols-4 gap-[80px_60px] py-10 list-none">
+      <ul className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 py-10 list-none">
         {filteredCountries.map((country) => (
           <CountryCard
             name={country.name.common}
