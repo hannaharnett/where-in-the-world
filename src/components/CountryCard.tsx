@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 type CardProps = {
   name: string;
   population: string;
@@ -20,12 +21,15 @@ export const CountryCard = (props: CardProps) => {
         <div className="p-6">
           <header>
             <h2 className="text-xl font-bold text-gray-800">
-              <a
-                href={props.link}
+              <Link
+                to={props.link}
+                state={{
+                  ...props,
+                }}
                 className="hover:underline after:absolute after:bottom-0 after:top-0 after:left-0 after:right-0"
               >
                 {props.name}
-              </a>{" "}
+              </Link>{" "}
             </h2>
           </header>
 

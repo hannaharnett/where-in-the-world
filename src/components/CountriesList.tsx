@@ -3,7 +3,7 @@ import { CountryCard } from "./CountryCard";
 import { Dropdown } from "./Dropdown";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
-type Country = {
+export type Country = {
   name: {
     common: string;
   };
