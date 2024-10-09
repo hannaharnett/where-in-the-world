@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { Navbar } from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import { CountriesList } from "./components/CountriesList";
 
 function App() {
-
   return (
     <>
-      <h1 className="text-blue-700 font-bold  text-normal">
-        Where in the world
-      </h1>
-
-     
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<CountriesList />} />
+      </Routes>
     </>
   );
 }
 
-export default App
+export default App;
