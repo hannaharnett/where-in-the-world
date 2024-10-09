@@ -1,5 +1,22 @@
 # where-in-the-world
 
+## Installation
+
+### Clone
+
+Clone this repo to your local machine using [https://github.com/hannaharnett/where-in-the-world.git](https://github.com/hannaharnett/where-in-the-world.git)
+
+### Setup
+
+In the root folder run
+
+```
+$ npm install
+$ npm run dev
+```
+
+Go to [localhost:5173](http://localhost:5173/) to view project
+
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
